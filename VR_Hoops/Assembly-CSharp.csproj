@@ -47,7 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallLauncher.cs" />
      <Compile Include="Assets\Scripts\Camera Rotation\CamRotation.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Scoring\DetectScoring.cs" />
+     <Compile Include="Assets\Scripts\Scoring\GameTimer.cs" />
+     <Compile Include="Assets\Scripts\Scoring\ScoreDisplay.cs" />
      <Compile Include="Assets\Scripts\Scoring\Scorekeeper.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
