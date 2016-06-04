@@ -50,6 +50,8 @@
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Scoring\DetectScoring.cs" />
      <Compile Include="Assets\Scripts\Scoring\GameOverScoreDisplay.cs" />
+     <Compile Include="Assets\Scripts\Scoring\HoopTriggers\primaryGoalTrigger.cs" />
+     <Compile Include="Assets\Scripts\Scoring\HoopTriggers\secondaryGoalTrigger.cs" />
      <Compile Include="Assets\Scripts\Scoring\ScoreAbsorber.cs" />
      <Compile Include="Assets\Scripts\Scoring\ScoreDisplay.cs" />
      <Compile Include="Assets\Scripts\Scoring\Scorekeeper.cs" />

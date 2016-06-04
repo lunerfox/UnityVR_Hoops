@@ -15,19 +15,7 @@ public class BallLauncher : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-        if (Input.GetKeyDown(KeyCode.A)) {
-            //Creates a new ball.
-            instance = Instantiate(ballPrefab);
-            instance_RB = instance.GetComponent<Rigidbody>();
-            //Starting position of the ball.
-            Vector3 startPos = new Vector3(0, 2, 2);
-            
-            instance_RB.useGravity = false;
-        }
-        */
-
-        if (Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetButtonDown("Fire1")){
             Camera camera = GetComponentInChildren<Camera>();
             //Creates a new ball.
             instance = Instantiate(ballPrefab);
