@@ -24,9 +24,13 @@ public class BallLauncher : MonoBehaviour {
             instance_RB.transform.position = transform.position + startPos;
             instance_RB.useGravity = false;
         }
+
         if (Input.GetKeyDown(KeyCode.Space)){
-            //This will have to change based on where you're looking.
-            instance_RB.velocity = velocity_scale * (Vector3.forward + Vector3.up);
+            Camera camera = GetComponentInChildren<Camera>();
+            //We use the global rotations here because from the camera's perspective, the only rotation
+            //thats changing is in the y axis. The body itself handles the x axis rotation. If we use
+            //Local Rotation, then the object will only report y direction changes.
+            instance_RB.velocity = camera.transform.rotation * Vector3.forward * velocity_scale;
             instance_RB.useGravity = true;
         }
     }
