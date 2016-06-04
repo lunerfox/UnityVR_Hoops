@@ -7,6 +7,10 @@ public class Scorekeeper : MonoBehaviour {
 
     uint score;
 
+    void Awake () {
+        DontDestroyOnLoad(this);
+    }
+
 	// Use this for initialization
 	void Start () {
         score = 0;
@@ -20,5 +24,13 @@ public class Scorekeeper : MonoBehaviour {
     public void IncrementScore(uint reward) { 
         score = score + reward;
         print("Ball hit target! Your score is now " + score);
+    }
+
+    public uint getScore() {
+        return score;
+    }
+
+    public void resetScore() {
+        score = 0;
     }
 }

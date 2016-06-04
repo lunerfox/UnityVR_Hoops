@@ -16,6 +16,10 @@ public class LevelManager : MonoBehaviour {
         currentIndex = SceneManager.GetActiveScene().buildIndex;
         // Reset the clock
         timeTillNextLevel = timeTillNextLevelcfg;
+        // Reset the score if the game state being entered.
+        if (currentIndex == (int)GameStates.Game) {
+            FindObjectOfType<Scorekeeper>().resetScore();
+        }
     }
 	
 	// Update is called once per frame
@@ -44,5 +48,9 @@ public class LevelManager : MonoBehaviour {
 
     public void loadStartScene() {
         SceneManager.LoadScene(0);
+    }
+
+    public float getTimeTilNextLevel() {
+        return timeTillNextLevel;
     }
 }
