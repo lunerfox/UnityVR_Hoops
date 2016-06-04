@@ -16,6 +16,6 @@ public class TimeDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "" + FindObjectOfType<LevelManager>().getTimeTilNextLevel();
+        text.text = "" + Mathf.Round(FindObjectOfType<LevelManager>().getTimeTilNextLevel()*100)/100;
     }
 }
