@@ -24,6 +24,8 @@ public class Scorekeeper : MonoBehaviour {
     public void IncrementScore(uint reward) { 
         score = score + reward;
         print("Ball hit target! Your score is now " + score);
+        //Play the associated audio when a scoring occurs.
+        GetComponent<AudioSource>().Play();
     }
 
     public uint getScore() {
